@@ -10,5 +10,10 @@ def stair_case n, storage
 	# When steps equals 0-1, only one way to reach top
 	if n <= 1
 		return 1
-	end	
+	end
+	
+	# If we found answer from before, no need to repeat process.
+	if storage[n]
+		return storage[n]
+	end		
 end	
