@@ -15,5 +15,9 @@ def stair_case n, storage
 	# If we found answer from before, no need to repeat process.
 	if storage[n]
 		return storage[n]
-	end		
+	end	
+
+	# Answer Ex: if steps equals 5, answer is answer to 4 steps + answer to 3 steps.
+	# So use recursion.	
+	result = stair_case n - 1, storage + stair_case n - 2, storage
 end	
