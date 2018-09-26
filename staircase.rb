@@ -20,4 +20,9 @@ def stair_case n, storage
 	# Answer Ex: if steps equals 5, answer is answer to 4 steps + answer to 3 steps.
 	# So use recursion.	
 	result = stair_case n - 1, storage + stair_case n - 2, storage
+
+	# Store answer into array before returning
+	storage[n] = result
+
+	result
 end	
